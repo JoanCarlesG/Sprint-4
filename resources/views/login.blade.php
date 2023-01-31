@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ asset('img/logo.png') }}" type="image/icon type">
     <title>GameDay</title>
     <!-- Fonts -->
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
@@ -48,11 +49,11 @@
     <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="w-full max-w-md space-y-8">
             <div>
-                <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+                <img class="mx-auto h-20 w-auto rounded-lg" src="/img/logo.png" alt="Your Company">
                 <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
                 <p class="mt-2 text-center text-sm text-gray-600">
                     Or
-                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">start your 14-day free trial</a>
+                    <a href="#" class="font-medium text-gray-900 hover:text-yellow-300 hover:drop-shadow-lg">Create a new account</a>
                 </p>
             </div>
             <form class="mt-8 space-y-6" action="#" method="POST">
