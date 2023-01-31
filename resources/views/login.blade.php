@@ -7,13 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameDay</title>
     <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Styles -->
     <style>
         body {
-            font-family: 'Nunito', sans-serif;
             max-height: fit-content;
             height: 100vh;
         }
