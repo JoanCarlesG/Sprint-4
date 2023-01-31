@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{ asset('img/logo.png') }}" type="image/icon type">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
     <title>GameDay</title>
     <!-- Fonts -->
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
@@ -37,8 +38,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(120deg, white, white);
-            opacity: .4;
+            background-image: linear-gradient(120deg, white, black);
+            opacity: .5;
             z-index: -1;
         }
     </style>
@@ -51,7 +52,7 @@
             <div>
                 <img class="mx-auto h-20 w-auto rounded-lg" src="/img/logo.png" alt="Your Company">
                 <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
-                <p class="mt-2 text-center text-sm text-gray-600">
+                <p class="mt-2 text-center text-sm text-gray-900">
                     Or
                     <a href="#" class="font-medium text-gray-900 hover:text-yellow-300 hover:drop-shadow-lg">Create a new account</a>
                 </p>
@@ -70,24 +71,28 @@
                 </div>
 
                 <div class="flex items-center justify-between">
-                    <div class="flex items-center">
-                        <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                        <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
+                    <div class="container">
+                        <input type="checkbox" id="cbx2" style="display: none;">
+
+                        <label for="cbx2" class="check">
+                            <div class="flex items-center space-around">
+                                <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                    <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                                    <polyline points="1 9 7 14 15 4"></polyline>
+                                </svg>
+                                <span class="ml-2 font-medium text-sm text-gray-900">Remember me</span>
+                            </div>
+                        </label>
                     </div>
 
+
                     <div class="text-sm">
-                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</a>
+                        <a href="#" class="font-medium text-gray-900 hover:text-yellow-300 hover:drop-shadow-lg">Forgot your password?</a>
                     </div>
                 </div>
 
                 <div>
-                    <button type="submit" class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                            <!-- Heroicon name: mini/lock-closed -->
-                            <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
-                            </svg>
-                        </span>
+                    <button type="submit" class="btn group relative flex w-full justify-center rounded-md border border-transparent  py-2 px-4 text-md font-medium text-white">
                         Sign in
                     </button>
                 </div>
