@@ -70,7 +70,10 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="flex">
+                    <button type="submit" class="btn2 group relative flex w-full justify-center rounded-md border border-transparent  py-2 px-4 text-md font-medium text-white">
+                        <a href="/">Cancel</a>    
+                    </button>
                     <button type="submit" class="btn group relative flex w-full justify-center rounded-md border border-transparent  py-2 px-4 text-md font-medium text-white">
                         Sign up
                     </button>
