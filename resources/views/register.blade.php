@@ -7,7 +7,8 @@
                 <img class="mx-auto h-20 w-auto rounded-lg" src="/img/logo.png" alt="Your Company">
                 <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Create a new account</h2>
             </div>
-            <form class="mt-8 space-y-6" action="/" method="POST">
+            <form class="mt-8 space-y-6" action="/user" method="POST">
+                @csrf
                 <input type="hidden" name="remember" value="true">
                 <div class="-space-y-px rounded-md shadow-sm">
                     <div>
@@ -15,8 +16,8 @@
                         <input id="name" name="name" type="text" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-yellow-300 focus:outline-none focus:ring-yellow-300 sm:text-sm" placeholder="Name">
                     </div>
                     <div>
-                        <label for="email-address" class="sr-only">Email address</label>
-                        <input id="email-address" name="email" type="email" required class="relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-yellow-300 focus:outline-none focus:ring-yellow-300 sm:text-sm" placeholder="Email address">
+                        <label for="email" class="sr-only">Email address</label>
+                        <input id="email" name="email" type="email" required class="relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-yellow-300 focus:outline-none focus:ring-yellow-300 sm:text-sm" placeholder="Email address">
                     </div>
                     <div>
                         <label for="password" class="sr-only">Password</label>

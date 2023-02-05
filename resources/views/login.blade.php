@@ -8,7 +8,7 @@
             <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
             <p class="mt-2 text-center text-sm text-gray-900">
                 Or
-                <a href="register" class="font-medium text-gray-900 hover:text-yellow-300 hover:drop-shadow-lg">Create a new account</a>
+                <a href="user/create" class="font-medium text-gray-900 hover:text-yellow-300 hover:drop-shadow-lg">Create a new account</a>
             </p>
         </div>
         <form class="mt-8 space-y-6" action="#" method="POST">
