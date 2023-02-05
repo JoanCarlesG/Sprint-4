@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +18,6 @@
         }
 
         html {
-
             background-image: url("/img/ball.jpg");
             background-position: center;
             background-repeat: no-repeat;
@@ -46,9 +44,11 @@
 </head>
 
 <body>
-    <div class="container">
+
+    <div class="container ml-20 h-screen ">
         @yield('content')
     </div>
+
 </body>
 
 </html>

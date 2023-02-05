@@ -26,5 +26,5 @@ Route::get('/register', function () {
 Route::get('/home', function () {
     return view('main');
 });
-Route::resource('user', UserController::class);
+//Route::resource('user', 'app/Http/Controllers/UserController');
 
