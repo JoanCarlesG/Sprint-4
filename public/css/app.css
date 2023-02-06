@@ -324,3 +324,36 @@ nav.main-menu li.active>a,
   .table{
     background-color: #F7F7F9;
   }
+
+  /* TEAMS LAYOUT CARDS */
+
+  .card {
+    width: 190px;
+    height: 120px;
+    padding: 0.5rem;
+    background: #212121;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    position: relative;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+    border-left: 2px  rgba(255, 255, 255, 0.545) outset;
+    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+    transform: skewX(10deg);
+    transition: .4s;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .card:hover {
+    height: 254px;
+    transform: skew(0deg);
+  }
+  
+  .card h1 {
+    text-align: center;
+    margin: 1.3rem;
+    color: rgb(218, 244, 237);
+    text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+  }
+  
+  
