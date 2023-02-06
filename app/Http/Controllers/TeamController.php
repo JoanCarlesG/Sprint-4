@@ -18,7 +18,7 @@ class TeamController extends Controller
         //$id = $this->getRequest()->getParameter('user_id');
         //$teams = Team::all()->where('user_id', '=', $id);
         $teams = Team::all();
-        return view('main')->with('teams', $teams);
+        return view('teamsHome')->with('teams', $teams);
     }
 
     /**
@@ -28,7 +28,7 @@ class TeamController extends Controller
      */
     public function create()
     {
-        //
+        return view('teamsCreate');
     }
 
     /**
@@ -39,7 +39,15 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $team = new Team();
+        $team->name = $request->name;
+        $team->home_city = $request->city;
+        $team->stadium = $request->stadium;
+        //$team->user_id = auth()->user()->user_id;
+        //TEMPORARY FOR USER 4 (ADMIN)
+        $team->user_id = 4;
+        $team->save();
+        return redirect('/teams');
     }
 
     /**
