@@ -28,5 +28,5 @@ use Illuminate\Support\Facades\Route;
 //});
 Route::resource('user', 'App\Http\Controllers\UserController');
 Route::resource('teams', 'App\Http\Controllers\TeamController');
-Route::resource('matches', 'App\Http\Controllers\TeamMatchController');
+Route::resource('matches', 'App\Http\Controllers\MatchesController');
 
