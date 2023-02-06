@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('home_city', 45)->nullable();
             $table->string('stadium', 45)->nullable();
             $table->integer('user_id')->index('fk_team_user_idx');
-            $table->binary('crest')->nullable();
+            $table->string('crest', 255)->nullable();
 
             $table->primary(['team_id', 'user_id']);
         });

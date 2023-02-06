@@ -21,10 +21,10 @@
                     <img class="border-solid border-2 border-yellow-300 rounded-md" src="/img/FullLogo.png" alt="GameDay Logo with Name">
                 </li>
                 <li>
-                    <a href="https://jbfarrow.com">
+                    <a href="/teams">
                         <i class="fa fa-home fa-2x"></i>
                         <span class="nav-text">
-                            Community Dashboard
+                            My Teams
                         </span>
                     </a>
 
