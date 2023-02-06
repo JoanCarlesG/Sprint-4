@@ -18,8 +18,8 @@
 
         <!-- FORM -->
         <div class="mt-5 md:col-span-2 md:mt-0">
-            <form action="/teams" method="POST">
-            @csrf
+            <form action="/teams" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="shadow sm:overflow-hidden sm:rounded-md">
                     <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
                         <!-- Name -->
@@ -68,7 +68,7 @@
                                         </svg>
                                         <div class="flex text-sm text-gray-600">
                                             <label for="crest" class="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500">
-                                                <input type="file" id="crest" name="crest"  class="form-control">
+                                                <input type="file" id="crest" name="crest" class="form-control">
                                             </label>
                                         </div>
                                         <p class="text-xs text-gray-500">PNG, JPG up to 10MB</p>
@@ -76,8 +76,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                     <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
                         <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
