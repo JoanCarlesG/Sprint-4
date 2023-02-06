@@ -18,6 +18,9 @@
         <nav class="main-menu">
             <ul>
                 <li>
+                    <img class="border-solid border-2 border-yellow-300 rounded-md" src="/img/FullLogo.png" alt="GameDay Logo with Name">
+                </li>
+                <li>
                     <a href="https://jbfarrow.com">
                         <i class="fa fa-home fa-2x"></i>
                         <span class="nav-text">
@@ -97,7 +100,7 @@
 
             <ul class="logout">
                 <li>
-                    <a href="#">
+                    <a href="/user">
                         <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text">
                             Logout
