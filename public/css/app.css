@@ -316,3 +316,11 @@ nav.main-menu li.active>a,
     transition: all 0.2s linear;
     transition-delay: 0.15s;
   }
+
+  .header{
+    background-color: #11A163;
+    color: white;
+  }
+  .table{
+    background-color: #F7F7F9;
+  }
