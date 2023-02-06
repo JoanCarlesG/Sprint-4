@@ -31,7 +31,7 @@
                 <td class="px-6 py-4">{{ $team->home_city }}</td>
                 <td class="px-6 py-4">{{ $team->stadium }}</td>
                 <td class="px-6 py-4">
-                    <a href="teams/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2">Edit</a>
+                    <a href="teams/{{ $team->team_id }}/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2">Edit</a>
                     <button class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
                 </td>
             </tr>

@@ -12,6 +12,7 @@ class User extends Authenticatable
 {
     // Disable the model timestamps
     public $timestamps = false;
+    protected $primaryKey = 'user_id';
     
     use HasApiTokens, HasFactory, Notifiable;
 
