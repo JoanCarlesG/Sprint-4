@@ -10,7 +10,7 @@
 <button class="font-medium text-green-600 dark:text-green-500 hover:underline">
     <a href="teams/create" teams/create"">Add Team</a>
 </button>
-
+<!--
 <div class="table rounded-md">
     <table class="w-full text-md text-center text-gray-500 dark:text-gray-400 table-auto">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -52,6 +52,7 @@
         </tbody>
     </table>
 </div>
+-->
 <!-- CONFIRM DELETE BUTTON -->
 <script>
     function confirmDelete() {
