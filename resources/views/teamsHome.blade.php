@@ -32,11 +32,11 @@
                 <td class="px-6 py-4">{{ $team->stadium }}</td>
                 <td class="px-6 py-4">
                     <form action="{{ route('teams.destroy', $team->team_id) }}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <a href="teams/{{ $team->team_id }}/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2">Edit</a>
+                        @csrf
+                        @method('DELETE')
+                        <a href="teams/{{ $team->team_id }}/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2">Edit</a>
 
-                    <button onclick="return confirmDelete()" type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
+                        <button onclick="return confirmDelete()" type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
                     </form>
                 </td>
             </tr>
@@ -44,14 +44,36 @@
         </tbody>
     </table>
 </div>
-@endsection
-
+<!-- CONFIRM DELETE BUTTON -->
 <script>
-function confirmDelete() {
-    var result = confirm("Are you sure you want to delete this team?");
-    if (!result) {
-        return false 
+    function confirmDelete() {
+        var result = confirm("Are you sure you want to delete this team?");
+        if (!result) {
+            return false
+        }
     }
-}
-
 </script>
+<br>
+<div class="teams-layout md:grid md:grid-cols-12 md:gap-2">
+    @foreach ($teams as $team)
+    <div class="card md:col-span-1">
+
+        <h1>{{ $team->name }}</h1>
+        <p>Home: {{ $team->home_city }}</p>
+        <p>Stadium: {{ $team->stadium }}</p>
+        <div>
+            <form action="{{ route('teams.destroy', $team->team_id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <a href="teams/{{ $team->team_id }}/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2">Edit</a>
+                <br>
+                <button onclick="return confirmDelete()" type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
+            </form>
+        </div>
+
+    </div>
+    <br>
+    @endforeach
+</div>
+
+@endsection
