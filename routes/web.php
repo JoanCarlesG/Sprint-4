@@ -23,8 +23,9 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/register', function () {
 //    return view('register');
 //});
-Route::get('/home', function () {
-    return view('main');
-});
+//Route::get('/home', function () {
+//    return view('main');
+//});
 Route::resource('user', 'App\Http\Controllers\UserController');
+Route::resource('teams', 'App\Http\Controllers\TeamController');
 

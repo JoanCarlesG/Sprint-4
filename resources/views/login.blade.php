@@ -11,7 +11,7 @@
                 <a href="user/create" class="font-medium text-gray-900 hover:text-yellow-300 hover:drop-shadow-lg">Create a new account</a>
             </p>
         </div>
-        <form class="mt-8 space-y-6" action="#" method="POST">
+        <form class="mt-8 space-y-6" action="/teams" method="POST">
             <input type="hidden" name="remember" value="true">
             <div class="-space-y-px rounded-md shadow-sm">
                 <div>
