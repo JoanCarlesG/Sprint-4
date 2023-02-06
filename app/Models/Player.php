@@ -9,6 +9,6 @@ class Player extends Model
 {
     // Disable the model timestamps
     public $timestamps = false;
-    
+    protected $primaryKey = 'player_id';
     use HasFactory;
 }

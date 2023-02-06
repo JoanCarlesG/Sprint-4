@@ -69,7 +69,7 @@ class TeamController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('teamsUpdate')-> with('team', Team::find($id));
     }
 
     /**
@@ -81,7 +81,14 @@ class TeamController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $team = Team::find($id);
+
+        $team->name = $request->name;
+        $team->home_city = $request->city;
+        $team->stadium = $request->stadium;
+        
+        $team->save();
+        return redirect('/teams');
     }
 
     /**
