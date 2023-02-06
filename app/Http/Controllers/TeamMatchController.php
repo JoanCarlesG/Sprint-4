@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\TeamMatch;
+use App\Models\Matches;
 
-class TeamMatchController extends Controller
+class MatchesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class TeamMatchController extends Controller
      */
     public function index()
     {
-        //
+        $matches = Matches::all();
+        return view('matchesHome')->with('matches', $matches);
     }
 
     /**
@@ -24,7 +25,7 @@ class TeamMatchController extends Controller
      */
     public function create()
     {
-        //
+        return view('matchesCreate');
     }
 
     /**

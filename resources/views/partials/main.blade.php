@@ -30,10 +30,10 @@
 
                 </li>
                 <li class="has-subnav">
-                    <a href="#">
+                    <a href="/matches">
                         <i class="fa fa-globe fa-2x"></i>
                         <span class="nav-text">
-                            Global Surveyors
+                            Matches
                         </span>
                     </a>
 
