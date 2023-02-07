@@ -10,7 +10,11 @@
     <title>GameDay</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
-
+    <style> 
+    body{
+        font-family: 'Titillium Web', sans-serif;
+    }
+    </style>
 </head>
 
 <body>
@@ -61,12 +65,12 @@
         </nav>
     </div>
     <div class="header mb-2 p-6 text-lg">
-        <div class="ml-20">
-            <h1>GameDay</h1>
+        <div class="ml-20" style="font-size: 150%;">
+            <h1>GAMEDAY</h1>
         </div>
     </div>
 
-    <div class="content ml-20">
+    <div class="content ml-24">
         @yield('content')
     </div>
 

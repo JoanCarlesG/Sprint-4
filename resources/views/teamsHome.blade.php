@@ -10,9 +10,10 @@
 <br>
 @endif
 
-<button class="font-medium text-green-600 dark:text-green-500 hover:underline">
+<button class="btn font-bold text-green-600 dark:text-green-500">
     <a href="teams/create">Add Team</a>
 </button>
+<br>
 <!--
 <div class="table rounded-md">
     <table class="w-full text-md text-center text-gray-500 dark:text-gray-400 table-auto">
@@ -77,7 +78,7 @@
             @endif
             <h1>{{ $team->name }}</h1>
         </div>
-        <br><br>
+        <br>
         <p>Home: {{ $team->home_city }}</p>
         <p>Stadium: {{ $team->stadium }}</p>
         <div>
