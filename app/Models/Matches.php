@@ -10,6 +10,10 @@ class Matches extends Model
     // Disable the model timestamps
     public $timestamps = false;
     protected $primaryKey = 'matches_id';
+
+    protected $fillable = [
+        'team1_id', 'team2_id', 'date', 'stadium', 'goals1', 'goals2', 'length'
+    ];
     
     use HasFactory;
 }

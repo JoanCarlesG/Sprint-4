@@ -7,6 +7,20 @@
     <h2>Create New Match</h2>
 </div>
 
+@if ($errors->any())
+<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+    <strong class="font-bold">Red card!</strong>
+    <span class="block sm:inline">Something seriously bad happened.</span>
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+<br>
+
+@endif
+
 <div>
     <div class="md:grid md:grid-cols-4 md:gap-6">
         <div class="md:col-span-1">
@@ -37,6 +51,7 @@
                                 <label for="team1" class="block text-sm font-medium text-gray-700">Team 1</label>
                                 <div class="mt-1 flex rounded-md shadow-sm">
                                     <select name="team1" id="team1" class="block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                        <option selected="selected" value="">Choose a Team</option>
                                         @foreach($teams as $team)
                                         <option value="{{$team->team_id}}">{{$team->name}}</option>
                                         @endforeach
@@ -50,6 +65,7 @@
                                 <label for="team2" class="block text-sm font-medium text-gray-700">Team 2</label>
                                 <div class="mt-1 flex rounded-md shadow-sm">
                                     <select name="team2" id="team2" class="block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                        <option selected="selected" value="">Choose a Team</option>
                                         @foreach($teams as $team)
                                         <option value="{{$team->team_id}}">{{$team->name}}</option>
                                         @endforeach
