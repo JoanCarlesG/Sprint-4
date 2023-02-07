@@ -54,9 +54,7 @@
                         <div>
                             <label class="block text-sm font-medium text-gray-700">Crest</label>
                             <div class="mt-1 flex items-center">
-                                <span class="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
-                                    <img src="/img/crest.png" alt="Crest Icon">
-                                </span>
+                                <img src="/img/{{ $team->crest }}" width="70px" alt="Team Crest">
                             </div>
                             <br>
                             <!-- Add PNG, JPG -->
