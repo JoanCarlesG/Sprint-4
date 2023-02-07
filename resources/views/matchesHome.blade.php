@@ -1,11 +1,6 @@
 @extends('partials.main')
 
 @section('content')
-<div class="header mb-2 p-6 text-lg">
-    <h1>GameDay</h1>
-    <br>
-    <h2>Matches</h2>
-</div>
 
 @if ($message = Session::get('success'))
 <div class="bg-green-100 border border-green-400 text-red-700 px-4 py-3 rounded relative" role="alert">

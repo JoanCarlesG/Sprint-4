@@ -1,11 +1,6 @@
 @extends('partials.main')
 
 @section('content')
-<div class="header mb-2 p-6 text-lg">
-    <h1>GameDay</h1>
-    <br>
-    <h2>Edit Team</h2>
-</div>
 
 <div>
     <div class="md:grid md:grid-cols-4 md:gap-6">

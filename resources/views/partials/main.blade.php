@@ -37,57 +37,7 @@
                         </span>
                     </a>
 
-                </li>
-                <li class="has-subnav">
-                    <a href="#">
-                        <i class="fa fa-comments fa-2x"></i>
-                        <span class="nav-text">
-                            Group Hub Forums
-                        </span>
-                    </a>
 
-                </li>
-                <li class="has-subnav">
-                    <a href="#">
-                        <i class="fa fa-camera-retro fa-2x"></i>
-                        <span class="nav-text">
-                            Survey Photos
-                        </span>
-                    </a>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-film fa-2x"></i>
-                        <span class="nav-text">
-                            Surveying Tutorials
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-book fa-2x"></i>
-                        <span class="nav-text">
-                            Surveying Jobs
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-cogs fa-2x"></i>
-                        <span class="nav-text">
-                            Tools & Resources
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-map-marker fa-2x"></i>
-                        <span class="nav-text">
-                            Member Map
-                        </span>
-                    </a>
-                </li>
                 <li>
                     <a href="#">
                         <i class="fa fa-info fa-2x"></i>
@@ -109,6 +59,11 @@
                 </li>
             </ul>
         </nav>
+    </div>
+    <div class="header mb-2 p-6 text-lg">
+        <div class="ml-20">
+            <h1>GameDay</h1>
+        </div>
     </div>
 
     <div class="content ml-20">
