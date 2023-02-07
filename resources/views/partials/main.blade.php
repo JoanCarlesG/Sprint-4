@@ -18,19 +18,22 @@
         <nav class="main-menu">
             <ul>
                 <li>
-                    <a href="https://jbfarrow.com">
+                    <img class="border-solid border-2 border-yellow-300 rounded-md" src="/img/FullLogo.png" alt="GameDay Logo with Name">
+                </li>
+                <li>
+                    <a href="/teams">
                         <i class="fa fa-home fa-2x"></i>
                         <span class="nav-text">
-                            Community Dashboard
+                            My Teams
                         </span>
                     </a>
 
                 </li>
                 <li class="has-subnav">
-                    <a href="#">
+                    <a href="/matches">
                         <i class="fa fa-globe fa-2x"></i>
                         <span class="nav-text">
-                            Global Surveyors
+                            Matches
                         </span>
                     </a>
 
@@ -97,7 +100,7 @@
 
             <ul class="logout">
                 <li>
-                    <a href="#">
+                    <a href="/user">
                         <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text">
                             Logout

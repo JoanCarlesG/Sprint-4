@@ -40,9 +40,17 @@ class TeamController extends Controller
     public function store(Request $request)
     {
         $team = new Team();
+
         $team->name = $request->name;
         $team->home_city = $request->city;
         $team->stadium = $request->stadium;
+
+        if($request->file('crest')){
+            $file= $request->file('crest');
+            $filename= date('YmdHi').".".$file->getClientOriginalExtension();
+            $file-> move(public_path('img/'), $filename);
+            $team->crest = $filename;
+        }
         //$team->user_id = auth()->user()->user_id;
         //TEMPORARY FOR USER 4 (ADMIN)
         $team->user_id = 4;

@@ -13,8 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('team_has_matches', function (Blueprint $table) {
+        Schema::create('matches', function (Blueprint $table) {
             $table->comment('');
+            $table->integer('matches_id', true);
             $table->integer('team1_id')->index('fk_team_has_team_team1_idx');
             $table->integer('team2_id')->index('fk_team_has_team_team2_idx');
             $table->integer('goals1')->nullable();
@@ -23,7 +24,7 @@ return new class extends Migration
             $table->integer('length')->nullable();
             $table->dateTime('date')->nullable();
 
-            $table->primary(['team1_id', 'team2_id']);
+            $table->primary(['matches_id','team1_id', 'team2_id']);
         });
     }
 
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('team_has_matches');
+        Schema::dropIfExists('matches');
     }
 };
