@@ -122,7 +122,7 @@ class MatchesController extends Controller
             $match->length = 0;
         }
         $match->save();
-        return redirect('/matches');
+        return redirect('/matches')->with('success', 'Match updated!');
 
     }
 
