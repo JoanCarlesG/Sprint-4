@@ -42,6 +42,18 @@ class MatchesController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'date' => 'required',
+            'team1' => 'required',
+            'team2' => 'required',
+            'stadium' => 'required',
+        ],[
+            'date.required' => 'The Date field is required.',
+            'team1.required' => 'The Team 1 field is required.',
+            'team2.required' => 'The Team 2 field is required.',
+            'stadium.required' => 'The Stadium field is required.'
+        ]);
+        
         $match = new Matches();
         
         $match->team1_id = $request->team1;
@@ -53,7 +65,7 @@ class MatchesController extends Controller
         $match->length = 0;
 
         $match->save();
-        return redirect('/matches');
+        return redirect('/matches')->with('success', 'Match created!');
     }
 
     /**
