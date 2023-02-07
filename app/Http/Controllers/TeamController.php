@@ -102,7 +102,7 @@ class TeamController extends Controller
         $team->stadium = $request->stadium;
         
         $team->save();
-        return redirect('/teams');
+        return redirect('/teams')->with('success', 'Team updated!');
     }
 
     /**
