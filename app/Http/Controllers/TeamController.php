@@ -39,6 +39,12 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'city' => 'required',
+            'stadium' => 'required',
+            'crest' => 'image|mimes:png,jpg|max:2048',
+        ]);
         $team = new Team();
 
         $team->name = $request->name;
@@ -55,7 +61,7 @@ class TeamController extends Controller
         //TEMPORARY FOR USER 4 (ADMIN)
         $team->user_id = 4;
         $team->save();
-        return redirect('/teams');
+        return redirect('/teams')->with('success', 'Team created!');
     }
 
     /**
