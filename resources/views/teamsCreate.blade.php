@@ -7,6 +7,20 @@
     <h2>Add Team</h2>
 </div>
 
+@if ($errors->any())
+<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+    <strong class="font-bold">Red card!</strong>
+    <span class="block sm:inline">Something seriously bad happened.</span>
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+<br>
+
+@endif
+
 <div>
     <div class="md:grid md:grid-cols-4 md:gap-6">
         <div class="md:col-span-1">
