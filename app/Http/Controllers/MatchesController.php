@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Matches;
+use App\Models\Team;
+use Illuminate\Support\Facades\DB;
 
 class MatchesController extends Controller
 {
@@ -15,7 +17,10 @@ class MatchesController extends Controller
     public function index()
     {
         $matches = Matches::all();
-        return view('matchesHome')->with('matches', $matches);
+        $teams = Team::all();
+        
+        return view('matchesHome')->with('matches', $matches)
+            ->with('teams', $teams);
     }
 
     /**
@@ -25,7 +30,8 @@ class MatchesController extends Controller
      */
     public function create()
     {
-        return view('matchesCreate');
+        $teams = Team::all();
+        return view('matchesCreate')->with('teams', $teams);
     }
 
     /**
@@ -36,7 +42,18 @@ class MatchesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $match = new Matches();
+        
+        $match->team1_id = $request->team1;
+        $match->team2_id = $request->team2;
+        $match->date = $request->date;
+        $match->stadium = $request->stadium;
+        $match->goals1 = 0;
+        $match->goals2 = 0;
+        $match->length = 0;
+
+        $match->save();
+        return redirect('/matches');
     }
 
     /**

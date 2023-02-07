@@ -9,6 +9,7 @@ class Matches extends Model
 {
     // Disable the model timestamps
     public $timestamps = false;
+    protected $primaryKey = 'matches_id';
     
     use HasFactory;
 }

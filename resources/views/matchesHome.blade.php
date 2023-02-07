@@ -27,16 +27,29 @@
 
         <tbody>
             @foreach ($matches as $match)
+
             <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                 <td class="px-6 py-4">{{ $match->date }}</td>
                 <td class="px-6 py-4">{{ $match->stadium }}</td>
                 <td class="px-6 py-4">{{ $match->length }}'</td>
-                <td class="px-6 py-4">{{ $match->team1_id }}</td>
-                <td class="px-6 py-4">{{ $match->goals1 }} : {{ $match->goals2 }}</td>
-                <td class="px-6 py-4">{{ $match->team2_id }}</td>
                 <td class="px-6 py-4">
-                    
-                <form action="{{ route('matches.destroy', $match->matches_id) }}" method="POST">
+                    @foreach ($teams as $team)
+                    @if ($team->team_id == $match->team1_id)
+                    <img src="/img/{{ $team->crest }}" width="70px" alt="Team Crest">
+                    @endif
+                    @endforeach
+                </td>
+                <td class="px-6 py-4">{{ $match->goals1 }} : {{ $match->goals2 }}</td>
+                <td class="px-6 py-4">
+                    @foreach ($teams as $team)
+                    @if ($team->team_id == $match->team2_id)
+                    <img src="/img/{{ $team->crest }}" width="70px" alt="Team Crest">
+                    @endif
+                    @endforeach
+                </td>
+                <td class="px-6 py-4">
+
+                    <form action="{{ route('matches.destroy', $match->matches_id) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <a href="macthes/{{ $match->match_id }}/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2">Edit</a>
