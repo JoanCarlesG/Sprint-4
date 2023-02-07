@@ -122,6 +122,8 @@ class MatchesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $match = Matches::find($id);
+        $match->delete();
+        return redirect('/matches');
     }
 }
