@@ -52,7 +52,7 @@
                     <form action="{{ route('matches.destroy', $match->matches_id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <a href="macthes/{{ $match->match_id }}/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2">Edit</a>
+                        <a href="matches/{{ $match->matches_id }}/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2">Edit</a>
 
                         <button onclick="return confirmDelete()" type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
                     </form>
@@ -66,7 +66,7 @@
 <!-- CONFIRM DELETE BUTTON -->
 <script>
     function confirmDelete() {
-        var result = confirm("Are you sure you want to delete this team?");
+        var result = confirm("Are you sure you want to delete this match?");
         if (!result) {
             return false
         }

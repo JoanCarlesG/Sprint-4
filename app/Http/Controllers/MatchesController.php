@@ -75,7 +75,8 @@ class MatchesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $teams = Team::all();
+        return view('matchesUpdate')->with('match', Matches::find($id))->with('teams', $teams);
     }
 
     /**
@@ -87,7 +88,30 @@ class MatchesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $match = Matches::find($id);
+
+        $match->team1_id = $request->team1;
+        $match->team2_id = $request->team2;
+        $match->date = $request->date;
+        $match->stadium = $request->stadium;
+        if ($request->goals1) {
+            $match->goals1 = $request->goals1;
+        }else{
+            $match->goals1 = 0;
+        }
+        if ($request->goals2) {
+            $match->goals2 = $request->goals2;
+        }else{
+            $match->goals2 = 0;
+        }
+        if ($request->length) {
+            $match->length = $request->length;
+        }else{
+            $match->length = 0;
+        }
+        $match->save();
+        return redirect('/matches');
+
     }
 
     /**
