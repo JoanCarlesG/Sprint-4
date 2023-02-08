@@ -16,7 +16,7 @@
 <br>
 <br>
 <div class="table">
-    <table class=" rounded-md w-full text-md text-center text-gray-500 dark:text-gray-400 table-auto">
+    <table class="w-full text-md text-center text-gray-500 dark:text-gray-400 table-auto">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">Date</th>

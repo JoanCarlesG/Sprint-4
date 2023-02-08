@@ -24,32 +24,23 @@
                 <li>
                     <img class="border-solid border-2 border-yellow-300 rounded-md" src="/img/FullLogo.png" alt="GameDay Logo with Name">
                 </li>
+                <br>
                 <li>
                     <a href="/teams">
-                        <i class="fa fa-home fa-2x"></i>
+                        <i class="fa fa-users fa-2x"></i>
                         <span class="nav-text">
                             My Teams
                         </span>
                     </a>
-
                 </li>
-                <li class="has-subnav">
+                <br>
+                <li>
                     <a href="/matches">
-                        <i class="fa fa-globe fa-2x"></i>
+                        <i class="fa fa-trophy fa-2x"></i>
                         <span class="nav-text">
                             Matches
                         </span>
                     </a>
-
-
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Documentation
-                        </span>
-                    </a>
-                </li>
             </ul>
 
             <ul class="logout">
