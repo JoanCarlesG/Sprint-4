@@ -42,10 +42,10 @@
                         </span>
                     </a>
             </ul>
-
+            <!--
             <ul class="logout">
                 <li>
-                    <a href="/user">
+                    <a href="/">
                         <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text">
                             Logout
@@ -53,6 +53,7 @@
                     </a>
                 </li>
             </ul>
+            -->
         </nav>
     </div>
     <div class="header mb-2 p-6 text-lg">

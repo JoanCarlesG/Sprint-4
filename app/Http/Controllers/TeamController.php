@@ -59,7 +59,7 @@ class TeamController extends Controller
         }
         //$team->user_id = auth()->user()->user_id;
         //TEMPORARY FOR USER 4 (ADMIN)
-        $team->user_id = 4;
+        //$team->user_id = 4;
         $team->save();
         return redirect('/teams')->with('success', 'Team created!');
     }

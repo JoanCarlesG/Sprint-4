@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,19 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-//Route::get('/', function () {
-//    return view('login');
-//});
-//Route::get('/register', function () {
-//    return view('register');
-//});
-//Route::get('/home', function () {
-//    return view('main');
-//});
-Route::resource('user', 'App\Http\Controllers\UserController');
+
+//Route::resource('user', 'App\Http\Controllers\UserController');
 Route::resource('teams', 'App\Http\Controllers\TeamController');
 Route::resource('matches', 'App\Http\Controllers\MatchesController');
 

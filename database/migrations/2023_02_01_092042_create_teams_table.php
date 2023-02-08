@@ -19,10 +19,12 @@ return new class extends Migration
             $table->string('name', 45)->nullable();
             $table->string('home_city', 45)->nullable();
             $table->string('stadium', 45)->nullable();
-            $table->integer('user_id')->index('fk_team_user_idx');
+            //$table->integer('user_id')->index('fk_team_user_idx');
             $table->string('crest', 255)->nullable();
 
-            $table->primary(['team_id', 'user_id']);
+            $table->primary(['team_id', 
+            //'user_id'
+        ]);
         });
     }
 
