@@ -13,16 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->comment('');
-            $table->integer('team_id', true);
+            $table->unsignedBigInteger('user_id', true);
             $table->string('name', 45)->nullable();
-            $table->string('home_city', 45)->nullable();
-            $table->string('stadium', 45)->nullable();
-            $table->integer('user_id')->index('fk_team_user_idx');
-            $table->string('crest', 255)->nullable();
-
-            $table->primary(['team_id', 'user_id']);
+            $table->string('email', 45)->nullable();
+            $table->string('password')->nullable();
         });
     }
 
@@ -33,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('users');
     }
 };

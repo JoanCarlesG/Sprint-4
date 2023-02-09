@@ -13,16 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('players', function (Blueprint $table) {
+        Schema::create('teams', function (Blueprint $table) {
             $table->comment('');
-            $table->integer('player_id', true);
+            $table->unsignedBigInteger('team_id', true);
             $table->string('name', 45)->nullable();
-            $table->string('surname', 45)->nullable();
-            $table->string('number', 45)->nullable();
-            $table->string('position', 45)->nullable();
-            $table->integer('team_id')->index('fk_player_team1_idx');
+            $table->string('home_city', 45)->nullable();
+            $table->string('stadium', 45)->nullable();
+            $table->string('crest')->nullable();
+            $table->unsignedBigInteger('user_id');
 
-            $table->primary(['player_id', 'team_id']);
+            $table->foreign('user_id')->references(['user_id'])->on('users')->onUpdate('CASCADE')->onDelete('CASCADE');
+
         });
     }
 
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('players');
+        Schema::dropIfExists('teams');
     }
 };
