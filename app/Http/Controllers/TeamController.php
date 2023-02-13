@@ -56,10 +56,10 @@ class TeamController extends Controller
             $filename= date('YmdHi').".".$file->getClientOriginalExtension();
             $file-> move(public_path('img/'), $filename);
             $team->crest = $filename;
+        } else{
+            $team->crest = "crest.png";
         }
-        //$team->user_id = auth()->user()->user_id;
-        //TEMPORARY FOR USER 4 (ADMIN)
-        $team->user_id = 4;
+        $team->user_id = auth()->user()->user_id;
         $team->save();
         return redirect('/teams')->with('success', 'Team created!');
     }

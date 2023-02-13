@@ -17,8 +17,11 @@ return new class extends Migration
             $table->comment('');
             $table->unsignedBigInteger('user_id', true);
             $table->string('name', 45)->nullable();
-            $table->string('email', 45)->nullable();
+            $table->string('email', 45)->unique();
             $table->string('password')->nullable();
+            $table->rememberToken();
+            $table->timestamp('email_verified_at')->nullable();
+
         });
     }
 
