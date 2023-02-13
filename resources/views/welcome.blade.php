@@ -98,8 +98,8 @@
 
             <div class="links">
                 @if (Route::has('login') && Auth::check())
-                <div class="links">
-                    <a href="{{ url('/home') }}">Dashboard</a>
+                <div class="btn">
+                    <a href="{{ url('/teams') }}">Enter</a>
                 </div>
                 @elseif (Route::has('login') && !Auth::check())
                 <div class="flex-center">

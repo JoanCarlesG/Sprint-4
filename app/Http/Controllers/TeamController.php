@@ -56,6 +56,8 @@ class TeamController extends Controller
             $filename= date('YmdHi').".".$file->getClientOriginalExtension();
             $file-> move(public_path('img/'), $filename);
             $team->crest = $filename;
+        } else{
+            $team->crest = "crest.png";
         }
         $team->user_id = auth()->user()->user_id;
         $team->save();

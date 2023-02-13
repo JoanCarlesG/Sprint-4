@@ -44,16 +44,6 @@
                     </a>
             </ul>
 
-            <ul class="logout">
-                <li>
-                    <a href="/user">
-                        <i class="fa fa-power-off fa-2x"></i>
-                        <span class="nav-text">
-                            Logout
-                        </span>
-                    </a>
-                </li>
-            </ul>
         </nav>
     </div>
     <div class="header mb-2 p-6 text-lg flex justify-between">

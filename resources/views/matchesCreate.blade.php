@@ -48,7 +48,9 @@
                                     <select name="team1" id="team1" class="block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                         <option selected="selected" value="">Choose a Team</option>
                                         @foreach($teams as $team)
+                                        @if ($team->user_id == auth()->user()->user_id)
                                         <option value="{{$team->team_id}}">{{$team->name}}</option>
+                                        @endif
                                         @endforeach
                                     </select>
                                 </div>
@@ -62,7 +64,9 @@
                                     <select name="team2" id="team2" class="block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                         <option selected="selected" value="">Choose a Team</option>
                                         @foreach($teams as $team)
+                                        @if ($team->user_id == auth()->user()->user_id)
                                         <option value="{{$team->team_id}}">{{$team->name}}</option>
+                                        @endif
                                         @endforeach
                                     </select>
                                 </div>
