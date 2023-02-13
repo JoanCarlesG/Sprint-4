@@ -91,16 +91,23 @@
 <body>
 
 </body>
-<div class="text-9xl flex-center font-bold mt-6">
+<div class="text-7xl flex-center font-bold mt-6">
     404
 </div>
-<div class="text-5xl flex-center font-bold mt-6">
-    We missed the shot and the page wasn't found.
+<div class="text-3xl flex-center font-bold mt-6">
+    <p class="block">We missed the shot and the page wasn't found.</p>
 </div>
+<div class="flex-center font-bold mt-6">
+        <button class="btn">
+            <a href="/teams">Home</a>
+        </button>
+    </div>
 
 <div class="flex-center mt-14">
-    <div class="tenor-gif-embed" data-postid="25009404" data-share-method="host" data-aspect-ratio="1.77778" data-width="50%"><a href="https://tenor.com/view/kepa-arrizabalaga-penalty-miss-chelsea-carabao-cup-liverpool-gif-25009404">Kepa Arrizabalaga Penalty Miss GIF</a>from <a href="https://tenor.com/search/kepa+arrizabalaga-gifs">Kepa Arrizabalaga GIFs</a></div>
+    <div class="tenor-gif-embed" data-postid="25009404" data-share-method="host" data-aspect-ratio="1.77778" data-width="40%"><a href="https://tenor.com/view/kepa-arrizabalaga-penalty-miss-chelsea-carabao-cup-liverpool-gif-25009404">Kepa Arrizabalaga Penalty Miss GIF</a>from <a href="https://tenor.com/search/kepa+arrizabalaga-gifs">Kepa Arrizabalaga GIFs</a></div>
     <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 </div>
+
+
 
 </html>
