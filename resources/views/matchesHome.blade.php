@@ -10,14 +10,14 @@
 <br>
 @endif
 
-<button class="btn font-bold text-green-600 dark:text-green-500">
+<button class="btn font-bold text-green-600">
     <a href="matches/create">Create Match</a>
 </button>
 <br>
 <br>
 <div class="table">
-    <table class="w-full text-md text-center text-gray-500 dark:text-gray-400 table-auto">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <table class="w-full text-md text-center text-gray-500 table-auto">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
             <tr>
                 <th scope="col" class="px-6 py-3">Date</th>
                 <th scope="col" class="px-6 py-3">Stadium</th>
@@ -32,7 +32,7 @@
         <tbody>
             @foreach ($matches as $match)
 
-            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+            <tr class="bg-white border-b">
                 <td class="px-6 py-4">{{ $match->date }}</td>
                 <td class="px-6 py-4">{{ $match->stadium }}</td>
                 <td class="px-6 py-4">{{ $match->length }}'</td>
@@ -56,9 +56,9 @@
                     <form action="{{ route('matches.destroy', $match->matches_id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <a href="matches/{{ $match->matches_id }}/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2">Edit</a>
+                        <a href="matches/{{ $match->matches_id }}/edit" class="font-medium text-blue-600 hover:underline mr-2">Edit</a>
 
-                        <button onclick="return confirmDelete()" type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
+                        <button onclick="return confirmDelete()" type="submit" class="font-medium text-red-600 hover:underline">Delete</button>
                     </form>
                 </td>
             </tr>

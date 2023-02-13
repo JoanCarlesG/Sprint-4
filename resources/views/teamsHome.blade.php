@@ -10,14 +10,14 @@
 <br>
 @endif
 
-<button class="btn font-bold text-green-600 dark:text-green-500">
+<button class="btn font-bold text-green-600">
     <a href="teams/create">Add Team</a>
 </button>
 <br>
 <!--
 <div class="table rounded-md">
-    <table class="w-full text-md text-center text-gray-500 dark:text-gray-400 table-auto">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <table class="w-full text-md text-center text-gray-500 table-auto">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
             <tr>
                 <th scope="col" class="px-6 py-3">Crest</th>
                 <th scope="col" class="px-6 py-3">Name</th>
@@ -29,7 +29,7 @@
 
         <tbody>
             @foreach ($teams as $team)
-            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+            <tr class="bg-white border-b">
                 <td>
                     @if ($team->crest)
                     <img src="/img/{{ $team->crest }}" width="60px" alt="Team Crest">
@@ -46,9 +46,9 @@
                     <form action="{{ route('teams.destroy', $team->team_id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <a href="teams/{{ $team->team_id }}/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2">Edit</a>
+                        <a href="teams/{{ $team->team_id }}/edit" class="font-medium text-blue-600 hover:underline mr-2">Edit</a>
 
-                        <button onclick="return confirmDelete()" type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
+                        <button onclick="return confirmDelete()" type="submit" class="font-medium text-red-600 hover:underline">Delete</button>
                     </form>
                 </td>
             </tr>
@@ -85,9 +85,9 @@
             <form action="{{ route('teams.destroy', $team->team_id) }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <a href="teams/{{ $team->team_id }}/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2">Edit</a>
+                <a href="teams/{{ $team->team_id }}/edit" class="font-medium text-blue-600 hover:underline mr-2">Edit</a>
                 <br>
-                <button onclick="return confirmDelete()" type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
+                <button onclick="return confirmDelete()" type="submit" class="font-medium text-red-600 hover:underline">Delete</button>
             </form>
         </div>
 
