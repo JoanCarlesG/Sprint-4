@@ -69,6 +69,7 @@
 <br>
 <div class="teams-layout md:grid md:grid-cols-12 md:gap-2">
     @foreach ($teams as $team)
+    @if ($team->user_id == auth()->user()->user_id)
     <div class="card md:col-span-1">
         <div class="flex items-center justify-center">
             @if ($team->crest)
@@ -93,7 +94,9 @@
 
     </div>
     <br>
+    @endif
     @endforeach
+    
 </div>
 
 @endsection
