@@ -25,6 +25,7 @@
         </div>
 
         <!-- Remember Me -->
+        
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
@@ -39,7 +40,7 @@
                 </a>
             @endif
 
-            <x-primary-button class="ml-3">
+            <x-primary-button class="ml-3 btn">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
