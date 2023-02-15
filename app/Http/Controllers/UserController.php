@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('login');
+        return view('admin.admin');
     }
 
     /**
@@ -35,12 +35,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = new User();
-        $user->name = $request->name;
-        $user->mail = $request->email;
-        $user->pwd = bcrypt($request->password);
-        $user->save();
-        return redirect('/user');
+        //
     }
 
     /**
@@ -52,7 +47,7 @@ class UserController extends Controller
     public function show($id)
     {
         
-        return view('main');
+        
     }
 
     /**
@@ -61,9 +56,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('admin.edit', compact('user'));
     }
 
     /**

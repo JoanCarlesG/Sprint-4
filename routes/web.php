@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\MatchesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,9 +28,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//Route::resource('user', 'App\Http\Controllers\UserController');
-Route::resource('teams', 'App\Http\Controllers\TeamController');
-Route::resource('matches', 'App\Http\Controllers\MatchesController');
+Route::resource('user', UserController::class)->names('user');
+Route::resource('teams', TeamController::class)->names('teams');
+Route::resource('matches', MatchesController::class)->names('matches');
 
 
 require __DIR__.'/auth.php';
