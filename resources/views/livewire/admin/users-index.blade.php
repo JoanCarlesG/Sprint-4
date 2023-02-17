@@ -23,6 +23,9 @@
                                 Email
                             </th>
                             <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                Roles
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                                 Actions
                             </th>
                         </tr>
@@ -38,6 +41,9 @@
                             </td>
                             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                 {{ $user->email }}
+                            </td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            {{ $user->roles->last()->name }}
                             </td>
                             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                 <a class="" href="{{route('user.edit', $user)}}">Edit</a>
