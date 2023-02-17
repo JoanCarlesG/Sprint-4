@@ -48,12 +48,15 @@
                 </li>
                 <br>
                 <li>
+                    @can('user.index')
                     <a href="/user">
                         <i class="fa fa-user fa-2x"></i>
                         <span class="nav-text">
                             Users
                         </span>
                     </a>
+                    @endcan
+                    
                 </li>
                 <br>
             </ul>
