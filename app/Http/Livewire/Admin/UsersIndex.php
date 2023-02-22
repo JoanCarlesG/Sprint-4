@@ -10,7 +10,7 @@ class UsersIndex extends Component
     public $search;
 
     public function updatingSearch(){
-        $this->resetPage();
+        $this->reset();
     }
 
     public function render()
